@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('contact',function (){
-    return 'Contact Us';
+
+Route::view('contact', 'contact'); //cara cepat tanpa function
+
+Route::get('about',function (){
+    return view('about');       //cara biasa
 });
