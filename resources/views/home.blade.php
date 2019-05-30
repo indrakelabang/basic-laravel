@@ -3,8 +3,6 @@
 @section('content')
 
 
-<h1>Contact US</h1>
-
-<p>lorem ipsum</p>
+<h1>Welcome to Laravel 5.8</h1>
 
 @endsection
