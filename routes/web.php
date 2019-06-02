@@ -24,3 +24,5 @@ Route::view('contact', 'contact'); //cara cepat tanpa function
 Route::get('about',function (){
     return view('about');       //cara biasa,jika hal page di dalam folder gunakan .
 });
+
+Route::post('customers', 'CustomersController@store');
