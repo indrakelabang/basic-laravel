@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('title')
+    Contact Page
+@endsection
+
 @section('content')
 
 
