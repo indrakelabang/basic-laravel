@@ -19,18 +19,14 @@ class CustomersController extends Controller
 
     public function store()
     {
-        $data= request()->validate([
+        $data = request()->validate([
             'name'=> 'required|min:3',
             'email'=> 'required|email',
             'active'=> 'required',
 
             ]);
 
-        $customers = new Customer();
-        $customers->name = request('name');
-        $customers->email = request('email');
-        $customers->active = request('active');
-        $customers->save();
+        Customer::create($data);
 
         return back();
     }
