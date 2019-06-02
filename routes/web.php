@@ -11,18 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('customers','CustomersController@list');
+//Route::get('/', function () {return view('home');}); CARA LAMA
+//Route::get('about',function (){return view('about');}); CARA LAMA
 
 
-
+Route::view('/', 'home');
 Route::view('contact', 'contact'); //cara cepat tanpa function
+Route::view('about', 'about'); //cara cepat tanpa function
 
-Route::get('about',function (){
-    return view('about');       //cara biasa,jika hal page di dalam folder gunakan .
-});
-
+Route::get('customers','CustomersController@index');
+Route::get('customers/create','CustomersController@create');
 Route::post('customers', 'CustomersController@store');
