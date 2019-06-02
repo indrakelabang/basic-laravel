@@ -1,8 +1,6 @@
 @extends('layout')
 
-@section('title')
-    About Page
-@endsection
+@section('title', 'About Page')
 
 @section('content')
 

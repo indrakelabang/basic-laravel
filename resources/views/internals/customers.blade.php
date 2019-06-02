@@ -1,8 +1,6 @@
 @extends('layout')
 
-@section('title')
-    Customer List
-@endsection
+@section('title', 'Customer List')
 
 @section('content')
     <div class="row">
