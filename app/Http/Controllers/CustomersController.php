@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
     public function list()
     {
-        $customers = [
-            'John Doe',
-            'Jane',
-            'Mary',
-        ];
+        $customers = Customer::all();
+
+
         return view('internals.customers',[
              'anothername' => $customers,         //parsing data
         ]);
