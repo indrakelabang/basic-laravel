@@ -19,10 +19,18 @@ Route::view('/', 'home');
 Route::view('contact', 'contact'); //cara cepat tanpa function
 Route::view('about', 'about'); //cara cepat tanpa function
 
-Route::get('customers','CustomersController@index');
+/* Route::get('customers','CustomersController@index');
 Route::get('customers/create','CustomersController@create');
 Route::post('customers', 'CustomersController@store');
 Route::get('customers/{customer}', 'CustomersController@show');
 Route::get('customers/{customer}/edit', 'CustomersController@edit');
 Route::patch('customers/{customer}', 'CustomersController@update');
-Route::delete('customers/{customer}', 'CustomersController@destroy');
+Route::delete('customers/{customer}', 'CustomersController@destroy'); */
+
+//cara lama di buat 1-1 per routenya
+//yg di bawah cara baru lebih simple (karena semua view dan func sudah di dalam customerscontroller)
+
+
+Route::resource('customers', 'CustomersController');
+
+
