@@ -4,18 +4,18 @@
 
 @section('content')
 
+    <h1>Contact US</h1>
 
-<h1>Contact US</h1>
+    @if( !session()->has('message'))
+        <form action="/contact" method="POST">
 
-<form action="/contact" method="POST">
-
-        <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" value="{{ old('name') }}" class="form-control">
-                    <div>
-                        {{ $errors->first('name') }}
-                    </div>
-            </div>
+            <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" value="{{ old('name') }}" class="form-control">
+                        <div>
+                            {{ $errors->first('name') }}
+                        </div>
+             </div>
 
             <div class="form-group">
                 <label for="Email">Email</label>
@@ -40,8 +40,6 @@
 
             <button type="submit" class="btn btn-primary">Send Message</button>
 
-
-</form>
-
-
+        </form>
+    @endif
 @endsection
