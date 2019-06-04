@@ -33,10 +33,7 @@ Route::delete('customers/{customer}', 'CustomersController@destroy'); */
 //cara lama di buat 1-1 per routenya
 //yg di bawah cara baru lebih simple (karena semua view dan func sudah di dalam customerscontroller)
 
-
-Route::resource('customers', 'CustomersController');
-
-
+Route::resource('customers', 'CustomersController')->middleware('auth');
 
 Auth::routes();
 
