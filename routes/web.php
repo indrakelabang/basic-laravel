@@ -20,7 +20,8 @@ Route::view('/', 'home');
 Route::get('contact', 'ContactFormController@create');
 Route::post('contact', 'ContactFormController@store');
 
-Route::view('about', 'about'); //cara cepat tanpa function
+Route::view('about', 'about');
+//cara cepat tanpa function
 
 /* Route::get('customers','CustomersController@index');
 Route::get('customers/create','CustomersController@create');
