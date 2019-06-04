@@ -21,6 +21,7 @@ Route::get('contact', 'ContactFormController@create')->name('contact.create');
 Route::post('contact', 'ContactFormController@store')->name('contact.store');
 
 Route::view('about', 'about');
+
 //cara cepat tanpa function
 
 /* Route::get('customers','CustomersController@index');
