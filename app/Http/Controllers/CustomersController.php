@@ -34,7 +34,7 @@ class CustomersController extends Controller
     {
 
         Customer::create($this->validateRequest());
-
+        //tttt
         return redirect('customers');
     }
 
